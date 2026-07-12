@@ -1,4 +1,4 @@
-package Loops;
+package Loops.Basics;
 
 public class Printing_Numbers {
     public static void main(String[] args) {

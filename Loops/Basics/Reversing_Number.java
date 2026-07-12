@@ -1,4 +1,4 @@
-package Loops;
+package Loops.Basics;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Reversing_Number {
 
         while (num1 > 0) {
             int dig = num1 % 10;
-            
+
             num1 = num1 / 10;
             rev = (rev * 10) + dig;
         }
