@@ -2,19 +2,28 @@ import java.util.*;
 
 public class rough {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        System.out.println(isPrime(13));
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 5; j++) {
-                if (i == 1 || i == 5 || j == 1 || j == 5) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
+    public static boolean isPrime(int n) {
+
+        boolean isPrime = true;
+
+        if (n <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i * i <= n; i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
                 }
             }
-            System.out.println();
         }
 
-        sc.close();
+        if (isPrime) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
