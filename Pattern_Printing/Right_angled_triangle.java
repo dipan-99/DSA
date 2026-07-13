@@ -1,6 +1,6 @@
 package Pattern_Printing;
 
-public class Right_angled_star {
+public class Right_angled_triangle {
     public static void main(String[] args) {
 
         for (int i = 1; i <= 5; i++) {
