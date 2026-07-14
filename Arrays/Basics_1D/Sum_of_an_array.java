@@ -1,8 +1,8 @@
-package Arrays.Basics;
+package Arrays.Basics_1D;
 
 import java.util.Scanner;
 
-public class Min_in_an_array {
+public class Sum_of_an_array {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -14,15 +14,13 @@ public class Min_in_an_array {
             arr[i] = sc.nextInt();
         }
 
-        int min = arr[0];
+        int sum = 0;
 
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
         }
 
-        System.out.println(min);
+        System.out.println(sum);
 
         sc.close();
     }
