@@ -1,8 +1,10 @@
-import java.util.*;
+package Arrays.Basics;
 
-public class rough {
+import java.util.Scanner;
 
+public class Second_Largest_in_array {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
