@@ -1,7 +1,8 @@
-import java.util.*;
+package Arrays.Basics_1D;
 
-public class rough {
+import java.util.Scanner;
 
+public class k_left_rotation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
