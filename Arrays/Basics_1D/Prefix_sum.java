@@ -1,6 +1,8 @@
-import java.util.*;
+package Arrays.Basics_1D;
 
-public class rough {
+import java.util.Scanner;
+
+public class Prefix_sum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -33,4 +35,5 @@ public class rough {
 
         return prefix[R] - prefix[L - 1];
     }
+
 }
