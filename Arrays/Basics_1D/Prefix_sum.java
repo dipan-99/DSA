@@ -6,6 +6,7 @@ public class Prefix_sum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter the number of elements: ");
         int n = sc.nextInt();
 
         int[] arr = new int[n];
@@ -21,19 +22,21 @@ public class Prefix_sum {
             prefix[i] = prefix[i - 1] + arr[i];
         }
 
+        System.out.print("Enter the left index: ");
         int L = sc.nextInt();
+        System.out.print("Enter the right index: ");
         int R = sc.nextInt();
 
+        System.out.print("Range sum: ");
         System.out.println(rangeSum(prefix, L, R));
+
         sc.close();
     }
 
-    public static int rangeSum(int[] prefix, int L, int R) {
-        if (L == 0) {
-            return prefix[R];
+    public static int rangeSum(int[] arr, int l, int r) {
+        if (l == 0) {
+            return arr[r];
         }
-
-        return prefix[R] - prefix[L - 1];
+        return arr[r] - arr[l - 1];
     }
-
 }
