@@ -28,7 +28,9 @@ public class Prefix_sum {
         int R = sc.nextInt();
 
         System.out.print("Range sum: ");
-        System.out.println(rangeSum(prefix, L, R));
+        int ans = rangeSum(prefix, L, R);
+
+        System.out.println(ans);
 
         sc.close();
     }
