@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
+        
+        // Input
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -11,28 +13,24 @@ public class Practice {
             arr[i] = sc.nextInt();
         }
 
-        int[] prefix =new  int[n];
-        prefix[0] = arr[0];
+        int k = sc.nextInt();
 
-        for (int i = 1; i < n; i++) {
-            prefix[i] = prefix[i - 1] + arr[i];
+        // Answer
+        int sum = 0;
+
+        for (int i = 0; i < k; i++) {
+            sum += arr[i];
         }
 
-        int l = sc.nextInt();
-        int r = sc.nextInt();
+        int maxSum = sum;
 
-        int ans = PrefixSum(prefix, l, r);
+        for (int i = k; i < n; i++) {
+            sum = sum - arr[i - k] + arr[i];
+            maxSum = Math.max(maxSum, sum);
+        }
 
-        System.out.println(ans);
+        System.out.println(maxSum);
 
         sc.close();
-    }
-
-    public static int PrefixSum(int[] arr, int l, int r) {
-        if (l == 0) {
-            return arr[r];
-        }
-
-        return arr[r] - arr[l - 1];
     }
 }
