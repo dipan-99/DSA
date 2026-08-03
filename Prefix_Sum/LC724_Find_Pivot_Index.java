@@ -1,4 +1,4 @@
-package Arrays;
+package Prefix_Sum;
 
 public class LC724_Find_Pivot_Index {
     public int pivotIndex(int[] nums) {

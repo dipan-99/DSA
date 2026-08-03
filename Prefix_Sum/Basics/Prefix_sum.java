@@ -1,4 +1,4 @@
-package Arrays.Basics_1D;
+package Prefix_Sum.Basics;
 
 import java.util.Scanner;
 
