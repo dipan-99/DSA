@@ -17,29 +17,54 @@ public class Practice {
 
         // Answer
 
-        int[] prefix = new int[n];
-        prefix[0] = arr[0];
+        int sum = 0;
 
-        for (int i = 1; i < n; i++) {
-            prefix[i] = prefix[i - 1] + arr[i];
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
         }
 
-        int ans = Integer.MIN_VALUE;
+        int leftSum = 0;
+
+        for (int i = 0; i < n; i++) {
+            int rightSum = sum - leftSum - arr[i];
+
+            leftSum += arr[i];
+
+            if (leftSum == rightSum) {
+                System.out.println(1);
+                break;
+            }
+
+            System.out.println(-1);
+        }
 
         // Output
 
-        // for (int i = 0; i < n; i++) {
-        // System.out.print(prefix[i] + " ");
-        // }
 
-        for (int i = 0; i < n - 1; i++) {
-            if (prefix[i] > prefix[i + 1]) {
-                ans = prefix[i];
-            }
-        }
-
-        System.out.println(ans);
 
         sc.close();
+    }
+
+    public int pivotIndex(int[] nums) {
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+
+        int leftSum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            int rightSum = sum - leftSum - nums[i];
+
+            leftSum += nums[i];
+
+            if (leftSum == rightSum) {
+                return i;
+            }
+
+        }
+
+        return -1;
     }
 }
