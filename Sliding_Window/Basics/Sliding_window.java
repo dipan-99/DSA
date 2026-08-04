@@ -1,6 +1,8 @@
-import java.util.*;
+package Sliding_Window.Basics;
 
-public class Practice {
+import java.util.*;;
+
+public class Sliding_window {
     public static void main(String[] args) {
 
         // Input
