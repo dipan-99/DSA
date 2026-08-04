@@ -5,6 +5,7 @@ public class Practice {
     public static void main(String[] args) {
 
         // Input
+
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -15,6 +16,7 @@ public class Practice {
         }
 
         // Answer
+
         int[] prefix = new int[n];
         prefix[0] = arr[0];
 
@@ -22,16 +24,21 @@ public class Practice {
             prefix[i] = prefix[i - 1] + arr[i];
         }
 
-        int count = 0;
+        int ans = Integer.MIN_VALUE;
 
         // Output
-        for (int i = 0; i < n; i++) {
-            if (prefix[i] % 2 == 0) {
-                count++;
+
+        // for (int i = 0; i < n; i++) {
+        // System.out.print(prefix[i] + " ");
+        // }
+
+        for (int i = 0; i < n - 1; i++) {
+            if (prefix[i] > prefix[i + 1]) {
+                ans = prefix[i];
             }
         }
 
-        System.out.println(count);
+        System.out.println(ans);
 
         sc.close();
     }
