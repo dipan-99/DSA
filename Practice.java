@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Practice {
+
     public static void main(String[] args) {
 
         // Input
@@ -13,9 +14,6 @@ public class Practice {
             arr[i] = sc.nextInt();
         }
 
-        int l = sc.nextInt();
-        int r = sc.nextInt();
-
         // Answer
         int[] prefix = new int[n];
         prefix[0] = arr[0];
@@ -24,19 +22,17 @@ public class Practice {
             prefix[i] = prefix[i - 1] + arr[i];
         }
 
+        int count = 0;
+
         // Output
-        int ans = prefixSum(prefix, l, r);
-
-        System.out.println(ans);
-
-        sc.close();
-    }
-
-    public static int prefixSum(int[] arr, int l, int r) {
-        if (l == 0) {
-            return arr[r];
+        for (int i = 0; i < n; i++) {
+            if (prefix[i] % 2 == 0) {
+                count++;
+            }
         }
 
-        return arr[r] - arr[l - 1];
+        System.out.println(count);
+
+        sc.close();
     }
 }
