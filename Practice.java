@@ -12,33 +12,34 @@ public class Practice {
             arr[i] = sc.nextInt();
         }
 
-        // Output
-        int ans = pivotIndex(arr);
+        int k = 3;
 
-        System.out.println(ans);
+        // Output
+        System.out.println("Slinding Window sums");
+        slidingWindow(arr, k);
 
         sc.close();
     }
 
-    public static int pivotIndex(int[] nums) {
-        int sum = 0;
+    // public static int prefixSum(int[] arr, int k) {
 
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
+    // }
+
+    public static void slidingWindow(int[] arr, int k) {
+        int windowSum = 0;
+
+        for (int i = 0; i < k; i++) {
+            windowSum += arr[i];
         }
 
-        int leftSum = 0;
+        System.out.print(windowSum + " ");
 
-        for (int i = 0; i < nums.length; i++) {
-            int rightSum = sum - leftSum - nums[i];
+        for (int i = k; i < arr.length; i++) {
+            windowSum = windowSum - arr[i - k] + arr[i];
 
-            if (leftSum == rightSum) {
-                return i;
-            }
-
-            leftSum += nums[i];
+            System.out.print(windowSum + " ");
         }
 
-        return -1;
+        System.out.println();
     }
 }
