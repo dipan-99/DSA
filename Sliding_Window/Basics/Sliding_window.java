@@ -24,17 +24,16 @@ public class Sliding_window {
     }
 
     public static void slidingWindow(int[] arr, int k) {
+        int n = arr.length;
         int windowSum = 0;
 
         for (int i = 0; i < k; i++) {
             windowSum += arr[i];
         }
 
-        // First Window
         System.out.print(windowSum + " ");
 
-        // Remaining Window
-        for (int i = k; i < arr.length; i++) {
+        for (int i = k; i < n; i++) {
             windowSum = windowSum - arr[i - k] + arr[i];
 
             System.out.print(windowSum + " ");
