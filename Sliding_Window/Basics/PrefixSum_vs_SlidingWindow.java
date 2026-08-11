@@ -72,3 +72,17 @@ public class PrefixSum_vs_SlidingWindow {
         System.out.println();
     }
 }
+/*
+ * Sample Input
+ * 6
+ * 1 7 3 6 5 6
+ *
+ * Output
+ *
+ * Prefix Sum sums
+ * 11 16 14 17
+ * Slinding Window sums
+ * 11 16 14 17
+ *
+ *
+ */
