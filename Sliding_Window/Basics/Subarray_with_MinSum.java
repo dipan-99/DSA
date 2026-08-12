@@ -1,6 +1,8 @@
+package Sliding_Window.Basics;
+
 import java.util.*;
 
-public class Practice {
+public class Subarray_with_MinSum {
     public static void main(String[] args) {
         // Input
         Scanner sc = new Scanner(System.in);
