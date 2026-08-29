@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class LC33_Search_in_Rotated_Sorted_Array {
+public class LC33_Search_in_Rotated_Sorted_Array_I {
     public int search(int[] nums, int target) {
         int n = nums.length;
         int l = 0;
