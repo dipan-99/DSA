@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Practice {
+public class practice {
     public static void main(String[] args) {
         HashSet<Integer> set = new HashSet<>();
 
