@@ -1,7 +1,5 @@
 package Sliding_Window;
 
-import java.util.*;
-
 public class LC643_Maximum_Average_Subarray_I {
     public double findMaxAverage(int[] nums, int k) {
         int sum = 0;
