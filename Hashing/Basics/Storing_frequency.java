@@ -1,6 +1,7 @@
-import java.util.*;
+package Hashing.Basics;
+import java.util.HashMap;
 
-public class practice {
+public class Storing_frequency {
     public static void main(String[] args) {
         int[] arr = {};
         HashMap<Integer, Integer> freq = new HashMap<>();
