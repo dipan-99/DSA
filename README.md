@@ -8,28 +8,27 @@ This repository contains my solutions to DSA problems from various platforms.
 ## Platforms
 - LeetCode
 - GeeksforGeeks
-- HackerRank
 - Codeforces
 
 ## Topics Covered
 - Arrays
-- Strings
+- BinarySearch
+- Bit_Manipulation
+- Data types & Input
+- Hashing
+- If_Else
 - Linked List
+- Loops
+- Pattern_Printing
+- Prefix_Sum
+- Queue
+- Recursion
+- Sliding_Window
+- Stack
+- Strings
 - Trees
-- Graphs
-- Dynamic Programming
-- Greedy
-- Backtracking
+- Two_Pointers
+- Variables
 
 ## Goal
 Solve at least one problem every day while preparing for coding interviews.
-
-## Progress
-
-- Arrays: 0
-- Strings: 0
-- Linked List: 0
-- Trees: 0
-- Graphs: 0
-
-Total Solved: 0
