@@ -1,11 +1,11 @@
 package Hashing.Basics;
 
+import java.util.*;
+
 public class Length_of_longest_set_of_consecutive_integers {
     public int solve(int[] A) {
-
         HashSet<Integer> set = new HashSet<>();
 
-        // Put all elements in HashSet
         for (int num : A) {
             set.add(num);
         }
