@@ -11,7 +11,6 @@ public class Number_of_subarray_with_unique_elements {
         HashSet<Integer> set = new HashSet<>();
 
         for (int r = 0; r < n; r++) {
-
             while (set.contains(A[r])) {
                 set.remove(A[l]);
                 l++;
