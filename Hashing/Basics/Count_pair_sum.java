@@ -11,7 +11,6 @@ public class Count_pair_sum {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < A.length; i++) {
-
             int complement = B - A[i];
 
             if (map.containsKey(complement)) {
