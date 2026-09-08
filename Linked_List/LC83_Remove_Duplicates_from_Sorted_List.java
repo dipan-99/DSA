@@ -1,21 +1,18 @@
 package Linked_List;
 
-public class LC203_Remove_Linked_List_Elements {
-    public ListNode removeElements(ListNode head, int val) {
-        ListNode prev = new ListNode(0);
-        prev.next = head;
-        
-        ListNode curr = prev;
+public class LC83_Remove_Duplicates_from_Sorted_List {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode curr = head;
 
         while (curr != null && curr.next != null) {
-            if (curr.next.val == val) {
+            if (curr.val == curr.next.val) {
                 curr.next = curr.next.next;
             } else {
                 curr = curr.next;
             }
         }
 
-        return prev.next;
+        return head;
     }
 
     public class ListNode {
