@@ -3,16 +3,19 @@
 This repository contains my solutions to DSA problems from various platforms.
 
 ## Languages
+
 - Java
 
 ## Platforms
+
 - LeetCode
 - GeeksforGeeks
 - Codeforces
 
 ## Topics Covered
+
 - Arrays
-- BinarySearch
+- Binary_Search
 - Bit_Manipulation
 - Data types & Input
 - Hashing
@@ -31,4 +34,5 @@ This repository contains my solutions to DSA problems from various platforms.
 - Variables
 
 ## Goal
+
 Solve at least one problem every day while preparing for coding interviews.
