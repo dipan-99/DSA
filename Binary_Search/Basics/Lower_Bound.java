@@ -1,4 +1,4 @@
-package BinarySearch.Basics;
+package Binary_Search.Basics;
 
 public class Lower_Bound {
     public int lowerBound(int[] nums, int x) {

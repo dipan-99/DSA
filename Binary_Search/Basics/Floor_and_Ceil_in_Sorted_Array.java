@@ -1,4 +1,4 @@
-package BinarySearch.Basics;
+package Binary_Search.Basics;
 
 public class Floor_and_Ceil_in_Sorted_Array {
     public int[] getFloorAndCeil(int[] nums, int x) {

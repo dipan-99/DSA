@@ -1,17 +1,17 @@
-package BinarySearch.Basics;
+package Binary_Search;
 
-public class Search_K_in_sorted_array {
-    public int search(int[] arr, int K) {
-        int n = arr.length;
+public class LC704_Binary_Search {
+    public int search(int[] nums, int target) {
+        int n = nums.length;
         int l = 0;
         int r = n - 1;
 
         while (l <= r) {
             int m = l + (r - l) / 2;
 
-            if (arr[m] == K)
+            if (nums[m] == target)
                 return m;
-            else if (arr[m] < K)
+            else if (nums[m] < target)
                 l = m + 1;
             else
                 r = m - 1;

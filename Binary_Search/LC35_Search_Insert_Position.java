@@ -1,4 +1,4 @@
-package BinarySearch;
+package Binary_Search;
 
 public class LC35_Search_Insert_Position {
     public int searchInsert(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package BinarySearch;
+package Binary_Search;
 
 public class LC162_Find_Peak_Element {
     public int findPeakElement(int[] nums) {

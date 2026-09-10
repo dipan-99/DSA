@@ -1,4 +1,4 @@
-package BinarySearch;
+package Binary_Search;
 
 public class LC540_Single_Element_in_a_Sorted_Array {
     public int singleNonDuplicate(int[] nums) {

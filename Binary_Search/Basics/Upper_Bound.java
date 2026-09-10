@@ -1,4 +1,4 @@
-package BinarySearch.Basics;
+package Binary_Search.Basics;
 
 public class Upper_Bound {
     public int upperBound(int[] nums, int x) {

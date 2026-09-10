@@ -1,7 +1,7 @@
-package BinarySearch;
+package Binary_Search;
 
-public class LC33_Search_in_Rotated_Sorted_Array_I {
-    public int search(int[] nums, int target) {
+public class LC81_Search_in_Rotated_Sorted_Array_II {
+    public boolean search(int[] nums, int target) {
         int n = nums.length;
         int l = 0;
         int r = n - 1;
@@ -10,7 +10,13 @@ public class LC33_Search_in_Rotated_Sorted_Array_I {
             int m = l + (r - l) / 2;
 
             if (nums[m] == target)
-                return m;
+                return true;
+
+            if (nums[l] == nums[m] && nums[m] == nums[r]) {
+                l++;
+                r--;
+                continue;
+            }
 
             if (nums[l] <= nums[m]) {
                 if (nums[l] <= target && target <= nums[m]) {
@@ -27,6 +33,6 @@ public class LC33_Search_in_Rotated_Sorted_Array_I {
             }
         }
 
-        return -1;
+        return false;
     }
 }
