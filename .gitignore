@@ -8,6 +8,7 @@ bin/
 # IDE settings
 .vscode/
 .idea/
+.gitignore/
 
 # OS files
 .DS_Store
