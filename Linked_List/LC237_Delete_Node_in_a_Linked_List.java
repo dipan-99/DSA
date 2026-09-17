@@ -6,20 +6,20 @@ public class LC237_Delete_Node_in_a_Linked_List {
         node.next = node.next.next;
     }
 
-        public class ListNode {
-            int val;
-            ListNode next;
+    public class ListNode {
+        int val;
+        ListNode next;
 
-            ListNode() {
-            }
+        ListNode() {
+        }
 
-            ListNode(int val) {
-                this.val = val;
-            }
+        ListNode(int val) {
+            this.val = val;
+        }
 
-            ListNode(int val, ListNode next) {
-                this.val = val;
-                this.next = next;
-            }
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
         }
     }
+}
