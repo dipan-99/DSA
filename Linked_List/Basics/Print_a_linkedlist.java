@@ -1,4 +1,4 @@
-package Linked_List.Basics;
+// package Linked_List.Basics;
 
 public class Print_a_linkedlist {
     public static void solve(Node head) {

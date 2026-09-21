@@ -1,4 +1,4 @@
-package Linked_List.Basics;
+// package Linked_List.Basics;
 
 public class Delete_node_at_Kth_position {
     public Node solve(Node A, int B) {
