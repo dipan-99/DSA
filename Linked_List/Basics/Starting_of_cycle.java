@@ -1,7 +1,7 @@
 public class Starting_of_cycle {
     public static ListNode startingNode(ListNode head) {
 
-        
+        return head;
     }
         public class ListNode {
         int val;
