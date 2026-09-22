@@ -1,4 +1,4 @@
-// package Linked_List.Basics;
+package Linked_List.Basics;
 
 public class Length_of_linked_list {
     public static int solve(Node head) {

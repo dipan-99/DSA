@@ -1,3 +1,4 @@
+package Linked_List.Basics;
 
 public class Cycle_Detection {
     public static boolean cyclePresent(ListNode head) {

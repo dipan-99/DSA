@@ -1,4 +1,4 @@
-// package Linked_List.Basics;
+package Linked_List.Basics;
 
 public class Access_Kth_node {
     public int solve(Node A, int B) {
