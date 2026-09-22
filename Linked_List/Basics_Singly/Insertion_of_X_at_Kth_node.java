@@ -1,4 +1,4 @@
-package Linked_List.Basics;
+package Linked_List.Basics_Singly;
 
 public class Insertion_of_X_at_Kth_node {
     public class Node {
@@ -10,7 +10,6 @@ public class Insertion_of_X_at_Kth_node {
             this.next = null;
         }
     }
-
 
     public Node insert(Node head, int x, int k) {
         Node newNode = new Node(x);

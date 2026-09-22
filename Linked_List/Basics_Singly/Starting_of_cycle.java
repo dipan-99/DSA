@@ -1,11 +1,12 @@
-package Linked_List.Basics;
+package Linked_List.Basics_Singly;
 
 public class Starting_of_cycle {
     public static ListNode startingNode(ListNode head) {
 
         return head;
     }
-        public class ListNode {
+
+    public class ListNode {
         int val;
         ListNode next;
 

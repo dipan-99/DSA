@@ -1,13 +1,16 @@
-package Linked_List.Basics;
+package Linked_List.Basics_Singly;
 
-public class Print_a_linkedlist {
-    public static void solve(Node head) {
+public class Length_of_linked_list {
+    public static int solve(Node head) {
+        int count = 0;
         Node curr = head;
 
         while (curr != null) {
-            System.out.println(curr.data);
+            count++;
             curr = curr.next;
         }
+
+        return count;
     }
 
     class Node {

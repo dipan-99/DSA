@@ -1,23 +1,20 @@
-package Linked_List.Basics;
+package Linked_List.Basics_Singly;
 
-public class Length_of_linked_list {
-    public static int solve(Node head) {
-        int count = 0;
+public class Print_a_linkedlist {
+    public static void solve(Node head) {
         Node curr = head;
 
         while (curr != null) {
-            count++;
+            System.out.println(curr.data);
             curr = curr.next;
         }
-
-        return count;
     }
 
     class Node {
         int data;
         Node next;
 
-        Node(int data){
+        Node(int data) {
             this.data = data;
             this.next = null;
         }
