@@ -1,5 +1,7 @@
 package Linked_List.Basics_Doubly;
 
+// Insertion -> TC = O(1)
+
 public class Insertion_in_DLL {
     static class ListNode {
         int data;
@@ -38,7 +40,7 @@ public class Insertion_in_DLL {
         ListNode newNode = new ListNode(x);
         ListNode curr = head;
 
-        // first travel to the previous node of the required position then
+        // first travel to the previous node of the required position then,
 
         newNode.prev = curr;
         newNode.next = curr.next;
