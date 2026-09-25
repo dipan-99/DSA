@@ -1,4 +1,4 @@
-package OOPS.Basics.Access_Modifier;
+package OOPS.Basics.Encapsulation.Access_Modifier;
 
 public class TestAccess {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class TestAccess {
         System.out.println(obj.d);
 
         // Access these from:
-        
+
         // private → same class only
         // default → same package
         // protected → same package + subclasses

@@ -1,4 +1,4 @@
-package OOPS.Basics;
+package OOPS.Basics.Encapsulation.Getter_and_Setter;
 
 public class Getters_and_Setters_2 {
     static class Employee {

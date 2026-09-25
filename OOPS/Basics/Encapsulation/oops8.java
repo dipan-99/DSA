@@ -1,4 +1,4 @@
-package OOPS.Basics;
+package OOPS.Basics.Encapsulation;
 
 public class oops8 {
     static class BankAccount {
