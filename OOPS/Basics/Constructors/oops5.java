@@ -1,4 +1,4 @@
-package OOPS.Basics;
+package OOPS.Basics.Constructors;
 
 public class oops5 {
     static class Book {

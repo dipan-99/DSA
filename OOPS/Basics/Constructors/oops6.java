@@ -1,17 +1,18 @@
-package OOPS.Basics;
+package OOPS.Basics.Constructors;
 
-public class oops7 {
+public class oops6 {
     static class Product {
         String name;
         double price;
         int quantity;
 
         Product() {
-            this("Unknown", 0.0, 0);
         }
 
         Product(String name, double price) {
-            this(name, price, 1);
+            this.name = name;
+            this.price = price;
+            this.quantity = 1;
         }
 
         Product(String name, double price, int quantity) {
