@@ -1,6 +1,6 @@
 package OOPS.Basics;
 
-public class Getters_and_Setters {
+public class Getters_and_Setters_1 {
     static class Student {
         private String name;
         private int age;
