@@ -1,4 +1,4 @@
-package OOPS.Basics;
+package OOPS.Basics.Classes_and_Objects;
 
 public class oops1 {
     static class Car {
