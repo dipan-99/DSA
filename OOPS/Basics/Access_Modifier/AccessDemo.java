@@ -1,4 +1,4 @@
-package OOPS.Basics;
+package OOPS.Basics.Access_Modifier;
 
 public class AccessDemo {
     private int a = 10;
