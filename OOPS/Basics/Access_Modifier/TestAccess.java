@@ -8,5 +8,12 @@ public class TestAccess {
         System.out.println(obj.b);
         System.out.println(obj.c);
         System.out.println(obj.d);
+
+        // Access these from:
+        
+        // private → same class only
+        // default → same package
+        // protected → same package + subclasses
+        // public → everywhere
     }
 }
