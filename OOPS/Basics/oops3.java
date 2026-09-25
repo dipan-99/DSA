@@ -1,4 +1,4 @@
-package OOPS;
+package OOPS.Basics;
 
 public class oops3 {
     static class Student {
