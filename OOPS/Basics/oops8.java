@@ -2,11 +2,9 @@ package OOPS.Basics;
 
 public class oops8 {
     static class BankAccount {
-        private String accountHolder;
         private double balance;
 
         BankAccount(String accountHolder, double balance) {
-            this.accountHolder = accountHolder;
             this.balance = balance;
         }
 
