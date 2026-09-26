@@ -39,6 +39,12 @@ public class oops15 {
         }
 
         // Animal a = new Cat();
-        // Dog d = (Dog) a; ---> Gives ClassCastException
+        // Dog d = (Dog) a;         ---> Gives ClassCastException
+
+        // Animal a = new Cat();
+        // if (a instanceof Dog) {
+        //     Dog d = (Dog) a;     ---> Correct conversion
+        //     d.bark();
+        // }
     }
 }
