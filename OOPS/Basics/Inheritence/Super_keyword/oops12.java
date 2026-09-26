@@ -1,4 +1,4 @@
-package OOPS.Basics.Inheritence;
+package OOPS.Basics.Inheritence.Super_keyword;
 
 public class oops12 {
     static class Employee {
