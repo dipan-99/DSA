@@ -22,6 +22,7 @@ This repository contains my solutions to DSA problems from various platforms.
 - If_Else
 - Linked List
 - Loops
+- OOPS
 - Pattern_Printing
 - Prefix_Sum
 - Queue
