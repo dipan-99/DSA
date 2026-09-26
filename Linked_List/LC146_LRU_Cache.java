@@ -35,13 +35,11 @@ public class LC146_LRU_Cache {
     }
 
     private void remove(Node node) {
-
         node.prev.next = node.next;
         node.next.prev = node.prev;
     }
 
     private void insert(Node node) {
-
         node.prev = tail.prev;
         node.next = tail;
 
@@ -88,5 +86,25 @@ public class LC146_LRU_Cache {
 
             map.remove(lru.key);
         }
+    }
+
+    public static void main(String[] args) {
+
+        LC146_LRU_Cache cache = new LC146_LRU_Cache(2);
+
+        cache.put(1, 10);
+        cache.put(2, 20);
+
+        System.out.println(cache.get(1)); // 10
+
+        cache.put(3, 30);
+
+        System.out.println(cache.get(2)); // -1
+
+        cache.put(4, 40);
+
+        System.out.println(cache.get(1)); // -1
+        System.out.println(cache.get(3)); // 30
+        System.out.println(cache.get(4)); // 40
     }
 }
