@@ -5,22 +5,22 @@ import java.util.HashMap;
 public class LC146_LRU_Cache {
     class Node {
         int key;
-        int value;
+        int data;
         Node prev;
         Node next;
 
         Node(int key, int value) {
             this.key = key;
-            this.value = value;
+            this.data = value;
         }
     }
 
-    private int capacity;
+    int capacity;
 
-    private HashMap<Integer, Node> map;
+    HashMap<Integer, Node> map;
 
-    private Node head;
-    private Node tail;
+    Node head;
+    Node tail;
 
     public LC146_LRU_Cache(int capacity) {
         this.capacity = capacity;
@@ -30,16 +30,19 @@ public class LC146_LRU_Cache {
         head = new Node(-1, -1);
         tail = new Node(-1, -1);
 
+        // head ⇄ tail
         head.next = tail;
         tail.prev = head;
     }
 
-    private void remove(Node node) {
+    // Remove any node
+    void remove(Node node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
     }
 
-    private void insert(Node node) {
+    // Insert before tail
+    void insert(Node node) {
         node.prev = tail.prev;
         node.next = tail;
 
@@ -57,15 +60,14 @@ public class LC146_LRU_Cache {
         remove(node);
         insert(node);
 
-        return node.value;
+        return node.data;
     }
 
     public void put(int key, int value) {
         if (map.containsKey(key)) {
-
             Node node = map.get(key);
 
-            node.value = value;
+            node.data = value;
 
             remove(node);
             insert(node);
@@ -79,7 +81,6 @@ public class LC146_LRU_Cache {
         insert(newNode);
 
         if (map.size() > capacity) {
-
             Node lru = head.next;
 
             remove(lru);
