@@ -2,6 +2,9 @@
 *.class
 *.py
 
+# Rough files
+Solution.java
+
 # Build directories
 out/
 bin/
