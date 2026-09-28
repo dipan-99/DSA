@@ -1,17 +1,17 @@
 package Stack.Basics;
 
 public class Implementing_Stack_using_LinkedList {
-    static class StackUsingLinkedList {
-        class Node {
-            int data;
-            Node next;
+    static class Node {
+        int data;
+        Node next;
 
-            Node(int data) {
-                this.data = data;
-                this.next = null;
-            }
+        Node(int data) {
+            this.data = data;
+            this.next = null;
         }
+    }
 
+    static class StackUsingLinkedList {
         Node top = null;
         int size = 0;
 
@@ -28,8 +28,7 @@ public class Implementing_Stack_using_LinkedList {
         // Pop
         int pop() {
             if (top == null) {
-                System.out.println("Stack Underflow");
-                return -1;
+                throw new RuntimeException("Stack Underflow");
             }
 
             int value = top.data;
@@ -43,8 +42,7 @@ public class Implementing_Stack_using_LinkedList {
         // Peek
         int peek() {
             if (top == null) {
-                System.out.println("Stack is empty");
-                return -1;
+                throw new RuntimeException("Stack Underflow");
             }
 
             return top.data;
