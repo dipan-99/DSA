@@ -3,7 +3,7 @@ package Stack.LeetCode;
 import java.util.Stack;
 
 public class LC1047_Remove_All_Adjacent_Duplicates_In_String {
-    public String removeDuplicates(String s) {
+    public static String removeDuplicates(String s) {
         Stack<Character> st = new Stack<>();
 
         for (char ch : s.toCharArray()) {
@@ -21,5 +21,9 @@ public class LC1047_Remove_All_Adjacent_Duplicates_In_String {
         }
 
         return result.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeDuplicates("abbaca"));
     }
 }
