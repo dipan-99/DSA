@@ -1,6 +1,6 @@
 package Trees.Basics;
 
-public class Height_of_a_Tree {
+public class Height_of_Tree {
     static int height(TreeNode root) {
         if (root == null) {
             return -1;
