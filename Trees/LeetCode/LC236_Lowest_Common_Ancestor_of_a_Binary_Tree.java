@@ -19,6 +19,6 @@ public class LC236_Lowest_Common_Ancestor_of_a_Binary_Tree {
             return root;
         }
 
-        return left != null ? left : right;
+        return (left != null) ? left : right;
     }
 }
