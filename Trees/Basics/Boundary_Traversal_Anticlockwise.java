@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Boundary_Traversal_Anticlockwise {
-    
+
     // TC = O(N), SC = O(N)
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> result = new ArrayList<>();
