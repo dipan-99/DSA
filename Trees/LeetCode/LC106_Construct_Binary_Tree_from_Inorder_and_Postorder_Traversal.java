@@ -4,7 +4,7 @@ import java.util.HashMap;
 import Trees.Basics.TreeNode;
 
 public class LC106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal {
-    int idx = 0;
+    int idx;
     HashMap<Integer, Integer> map = new HashMap<>();
 
     public TreeNode buildTree(int[] inorder, int[] postorder) {
