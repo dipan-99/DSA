@@ -22,9 +22,7 @@ public class LC889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal {
 
         TreeNode root = new TreeNode(pre[idx++]);
 
-        if (l == r) {
-            return root;
-        }
+        if (l == r) return root;
 
         int leftRoot = pre[idx];
         int mid = map.get(leftRoot);
