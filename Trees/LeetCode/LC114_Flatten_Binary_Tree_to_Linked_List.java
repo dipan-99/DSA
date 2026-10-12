@@ -4,6 +4,8 @@ import java.util.*;
 import Trees.Basics.TreeNode;
 
 public class LC114_Flatten_Binary_Tree_to_Linked_List {
+
+    //Better Solution --- TC = O(N), SC = O(N)
     List<TreeNode> node = new ArrayList<>();
 
     public void flatten(TreeNode root) {
