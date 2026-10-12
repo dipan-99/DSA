@@ -5,10 +5,31 @@ import Trees.Basics.TreeNode;
 
 public class LC114_Flatten_Binary_Tree_to_Linked_List {
 
-    //Better Solution --- TC = O(N), SC = O(N)
+    // Optimal Solution --- TC = O(N), SC = O(1)
+    public void flattenSOL1(TreeNode root) {
+        TreeNode curr = root;
+
+        while (curr != null) {
+            if (curr.left != null) {
+                TreeNode prev = curr.left;
+
+                while (prev.right != null) {
+                    prev = prev.right;
+                }
+
+                prev.right = curr.right;
+                curr.right = curr.left;
+                curr.left = null;
+            }
+
+            curr = curr.right;
+        }
+    }
+
+    // Better Solution --- TC = O(N), SC = O(N)
     List<TreeNode> node = new ArrayList<>();
 
-    public void flatten(TreeNode root) {
+    public void flattenSOL2(TreeNode root) {
         pre(root);
 
         for (int i = 0; i < node.size() - 1; i++) {
