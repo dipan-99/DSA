@@ -1,21 +1,23 @@
+package Basics;
 import java.util.*;
 
 class BFS {
     static void bfs(List<List<Integer>> adj, int src) {
-        boolean[] visited = new boolean[adj.size()];
-        Queue<Integer> queue = new LinkedList<>();
+        int n = adj.size();
+        boolean[] visited = new boolean[n];
+        Queue<Integer> q = new LinkedList<>();
 
         visited[src] = true;
-        queue.offer(src);
+        q.offer(src);
 
-        while (!queue.isEmpty()) {
-            int u = queue.poll();
+        while (!q.isEmpty()) {
+            int u = q.poll();
             System.out.print(u + " ");
 
             for (int v : adj.get(u)) {
                 if (!visited[v]) {
                     visited[v] = true;
-                    queue.offer(v);
+                    q.offer(v);
                 }
             }
         }
@@ -35,7 +37,5 @@ class BFS {
         adj.get(1).add(4);
 
         bfs(adj, 0);
-
-        System.out.println();
     }
 }

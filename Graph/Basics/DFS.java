@@ -1,10 +1,8 @@
+package Basics;
 import java.util.*;
 
 class DFS {
-    static void dfs(
-            List<List<Integer>> adj,
-            int u,
-            boolean[] visited) {
+    static void dfs(List<List<Integer>> adj, int u, boolean[] visited) {
         visited[u] = true;
         System.out.print(u + " ");
 
@@ -30,5 +28,7 @@ class DFS {
 
         boolean[] visited = new boolean[V];
         dfs(adj, 0, visited);
+
+        System.out.println();
     }
 }
