@@ -3,43 +3,34 @@ package Binary_Search.Basics;
 public class  Painters_Partition {
     public int paint(int A, int B, int[] C) {
         long MOD = 10000003;
-        long l = maxElem(C);
-        long r = sum(C);
+        long l = maxElem(C), r = sum(C);
 
         while (l <= r) {
             long m = l + (r - l) / 2;
 
-            if (possible(C, A, m)) {
-                r = m - 1;
-            } else {
-                l = m + 1;
-            }
+            if (count(C, m) <= A) r = m - 1;
+            else l = m + 1;
         }
 
-        return (int) ((l * (long) B) % MOD);
+        return (int) ((l * B) % MOD);
     }
 
-    public static boolean possible(int[] C, int A, long Max) {
+    public int count(int[] C, long max) {
         int painters = 1;
-        int curr = 0;
+        long curr = 0;
 
         for (int x : C) {
-            if (curr + x <= Max) {
-                curr += x;
-            } else {
+            if (curr + x <= max) curr += x;
+            else {
                 painters++;
                 curr = x;
-
-                if (painters > A) {
-                    return false;
-                }
             }
         }
 
-        return true;
+        return painters;
     }
 
-        public static int maxElem(int[] A) {
+    int maxElem(int[] A) {
         int max = A[0];
 
         for (int x : A) {
@@ -49,8 +40,8 @@ public class  Painters_Partition {
         return max;
     }
 
-    public static int sum(int[] A) {
-        int sum = A[0];
+    int sum(int[] A) {
+        int sum = 0;
 
         for (int x : A) {
             sum += x;

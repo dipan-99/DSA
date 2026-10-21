@@ -2,37 +2,39 @@ package Binary_Search.LeetCode;
 
 public class LC875_Koko_Eating_Bananas {
     public int minEatingSpeed(int[] piles, int h) {
-        int l = 1;
-        int r = maxElem(piles);
-        int ans = 0;
+        int l = 1, r = maxElem(piles);
 
         while (l <= r) {
-            int m = l + (r - l) / 2;
+            int mid = l + (r - l) / 2;
 
-            long count = 0;
+            long hours = calHour(piles, mid);
 
-            for (int x : piles) {
-                count += (long) Math.ceil((double) x / m);
-            }
-
-            if (count <= h) {
-                ans = m;
-                r = m - 1;
-            } else {
-                l = m + 1;
-            }
+            if (hours <= h)
+                r = mid - 1;
+            else
+                l = mid + 1;
         }
 
-        return ans;
+        return l;
     }
 
-    public static int maxElem(int[] arr) {
-        int max = arr[0];
+    int maxElem(int[] A) {
+        int max = Integer.MIN_VALUE;
 
-        for (int i = 1; i < arr.length; i++) {
-            max = Math.max(max, arr[i]);
+        for (int x : A) {
+            max = Math.max(max, x);
         }
 
         return max;
+    }
+
+    long calHour(int[] arr, int H) {
+        long hours = 0;
+
+        for (int x : arr) {
+            hours += (x + H - 1) / H;
+        }
+
+        return hours;
     }
 }

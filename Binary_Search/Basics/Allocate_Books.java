@@ -2,49 +2,37 @@ package Binary_Search.Basics;
 
 public class Allocate_Books {
     public int books(int[] A, int B) {
-        int n = A.length;
-
-        if (B > n) {
-            return -1;
-        }
+        if (B > A.length) return -1;
 
         int l = maxElem(A), r = sum(A);
 
-        while (l < r) {
-            int m = l + (r - l) / 2;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
 
-            if (possible(A, B, m)) {
-                r = m;
-            } else {
-                l = m + 1;
-            }
+            if (count(A, mid) <= B) r = mid - 1;
+            else l = mid + 1;
         }
 
         return l;
     }
 
-    public static boolean possible(int[] A, int B, int maxPage) {
-        int student = 1;
-        int curr = 0;
+    int count(int[] A, int pages) {
+        int student = 1, countPage = 0;
 
-        for (int x : A) {
-            if (curr + x <= maxPage) {
-                curr += x;
+        for (int i = 0; i < A.length; i++) {
+            if (countPage + A[i] <= pages) {
+                countPage += A[i];
             } else {
                 student++;
-                curr = x;
-
-                if (student > B) {
-                    return false;
-                }
+                countPage = A[i];
             }
         }
 
-        return true;
+        return student;
     }
 
-    public static int maxElem(int[] A) {
-        int max = A[0];
+    int maxElem(int[] A) {
+        int max = Integer.MIN_VALUE;
 
         for (int x : A) {
             max = Math.max(max, x);
@@ -53,8 +41,8 @@ public class Allocate_Books {
         return max;
     }
 
-    public static int sum(int[] A) {
-        int sum = A[0];
+    int sum(int[] A) {
+        int sum = 0;
 
         for (int x : A) {
             sum += x;
