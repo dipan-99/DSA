@@ -1,7 +1,12 @@
 package Linked_List.LeetCode;
 
+import java.util.HashSet;
+import Linked_List.Basics_Singly.ListNode;
+
 public class LC160_Intersection_of_Two_Linked_Lists {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+
+    // TC = O(n + m), SC = O(1)
+    public ListNode getIntersectionNodeSOL1(ListNode headA, ListNode headB) {
         ListNode p1 = headA;
         ListNode p2 = headB;
 
@@ -22,20 +27,28 @@ public class LC160_Intersection_of_Two_Linked_Lists {
         return p1;
     }
 
-    public class ListNode {
-        int val;
-        ListNode next;
+    // TC = O(n + m), SC = O(n)
+    public ListNode getIntersectionNodeSOL2(ListNode headA, ListNode headB) {
 
-        ListNode() {
+        HashSet<ListNode> set = new HashSet<>();
+
+        ListNode curr = headA;
+
+        while (curr != null) {
+            set.add(curr);
+            curr = curr.next;
         }
 
-        ListNode(int val) {
-            this.val = val;
+        curr = headB;
+
+        while (curr != null) {
+            if (set.contains(curr)) {
+                return curr;
+            }
+
+            curr = curr.next;
         }
 
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
+        return null;
     }
 }
