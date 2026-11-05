@@ -8,8 +8,7 @@ public class LC108_Convert_Sorted_Array_to_Binary_Search_Tree {
     }
 
     TreeNode consruct(int[] A, int l, int r) {
-        if (l > r)
-            return null;
+        if (l > r) return null;
 
         int m = l + (r - l) / 2;
 
