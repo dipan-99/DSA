@@ -8,7 +8,6 @@ public class LC168_Excel_Sheet_Column_Title {
             columnNumber--;
 
             int rem = columnNumber % 26;
-
             char ch = (char) ('A' + rem);
 
             sb.append(ch);
