@@ -5,6 +5,7 @@ This repository contains my solutions to DSA problems from various platforms.
 ## Languages
 
 - Java
+- Python
 
 ## Platforms
 
