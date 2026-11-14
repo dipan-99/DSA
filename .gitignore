@@ -1,9 +1,9 @@
 # Java compiled files
 *.class
-*.py
 
 # Rough files
 Solution.java
+Solution.py
 
 # Build directories
 out/
